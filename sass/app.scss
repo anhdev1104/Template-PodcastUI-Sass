@@ -1,14 +1,6 @@
-@import './utils/variables';
-@import './utils/mixins';
+@use './base/reset';
+@use './base/typography';
 
-@import './base/reset';
-@import './base/typography';
-@import './base/general';
-
-@import './components/header';
-@import './components/sidebar';
-
-@import './layout/header';
-@import './layout/sidebar';
-
-@import './pages/home';
+@use './layout/structure';
+@use './layout/header';
+@use './layout/sidebar';
