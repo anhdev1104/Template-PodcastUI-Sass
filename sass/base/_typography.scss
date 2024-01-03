@@ -1,4 +1,6 @@
-@use '../utils';
+@use '../abstracts';
 body {
-    font-family: utils.$font-primary;
+    font-family: abstracts.$font-primary;
+    color: abstracts.$text-black1;
+    font-weight: 400;
 }
