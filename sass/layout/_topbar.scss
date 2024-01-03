@@ -1,0 +1,32 @@
+@use '../abstracts';
+
+.top-bar {
+    padding: 24px 56px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    @include abstracts.bg(abstracts.$gray-natural2);
+    padding: 12px 20px;
+    border-radius: 12px;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    flex: 0 1 360px;
+
+    &-input {
+        @include abstracts.bg(transparent);
+        @include abstracts.placeholder(abstracts.$gray2);
+        flex: 1;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        color: abstracts.$primary-color;
+        caret-color: abstracts.$primary-color;
+    }
+}

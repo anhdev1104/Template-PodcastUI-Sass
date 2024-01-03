@@ -3,4 +3,7 @@ body {
     font-family: abstracts.$font-primary;
     color: abstracts.$text-black1;
     font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

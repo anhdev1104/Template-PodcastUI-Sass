@@ -2,13 +2,13 @@ aside.sidebar
     a.logo(href="/")
         img(srcSet='./images/logo.png 2x' alt='logo GoCastUI')
     ul.menu
-        each item in [{text: 'Home', icon: './images/icons/icon-home.svg'}, {text: 'Trending', icon: './images/icons/icon-chart.svg'}, {text: 'Explore Topics', icon: './images/icons/icon-cube.svg'}, {text: 'Playlist', icon: './images/icons/icon-play.svg'}, {text: 'Subscriptions', icon: './images/icons/icon-subscriptions.svg'}]
+        each item in [{text: 'Home', icon: 'icon-home'}, {text: 'Trending', icon: 'icon-chart'}, {text: 'Explore Topics', icon: 'icon-cube'}, {text: 'Playlist', icon: 'icon-play'}, {text: 'Subscriptions', icon: 'icon-sub'}]
             +menu-item(item.text, item.icon)
     ul.menu
         h3.menu-heading Podcasters
-        each item in [{text: 'Dashboard', icon: './images/icons/icon-discovery.svg'}, {text: 'Episodes', icon: './images/icons/icon-mic.svg'}]
+        each item in [{text: 'Dashboard', icon: 'icon-discovery'}, {text: 'Episodes', icon: 'icon-mic'}, {text: 'Team', icon: 'icon-team'}, {text: 'Subscribers', icon: 'icon-addUser'}]
             +menu-item(item.text, item.icon)
     ul.menu
         h3.menu-heading Community
-        each item in ['Leaderboard']
-            +menu-item(item)
+        each item in [{text: 'Leaderboard', icon: 'icon-medal'}]
+            +menu-item(item.text, item.icon)

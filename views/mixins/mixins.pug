@@ -1,5 +1,27 @@
-mixin menu-item(text, icon = './images/icons/icon-home.svg', href = '#')
+mixin menu-item(text, icon = '', href = '#')
     li.menu-item
         a.menu-link(href= href)
-            img.menu-icon(src= icon)
+            if icon 
+                case icon 
+                    when 'icon-home'
+                        include ../icons/icon-home
+                    when 'icon-chart'
+                        include ../icons/icon-chart
+                    when 'icon-cube'
+                        include ../icons/icon-cube
+                    when 'icon-play'
+                        include ../icons/icon-play
+                    when 'icon-sub'
+                        include ../icons/icon-sub
+                    when 'icon-discovery'
+                        include ../icons/icon-discovery
+                    when 'icon-mic'
+                        include ../icons/icon-mic
+                    when 'icon-team'
+                        include ../icons/icon-team
+                    when 'icon-addUser'
+                        include ../icons/icon-addUser
+                    when 'icon-medal'
+                        include ../icons/icon-medal
+
             span.menu-text= text

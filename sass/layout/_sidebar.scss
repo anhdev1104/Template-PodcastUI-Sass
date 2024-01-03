@@ -19,7 +19,7 @@
         content: '';
         display: block;
         height: 1px;
-        background-color: abstracts.$graye9;
+        background-color: abstracts.$gray9;
         margin-block: var(--gap);
     }
 
@@ -28,6 +28,10 @@
         margin-bottom: 10px;
         color: abstracts.$text-gray;
         padding-left: 20px;
+    }
+
+    &-icon {
+        flex: 0 0 24px;
     }
 
     &-link {
@@ -43,6 +47,16 @@
         &:hover {
             background: var(--Gradient, linear-gradient(92deg, #415ef4 0.33%, #7141ef 28.14%));
             color: #fff;
+
+            [fill^='#E5'] {
+                fill: #fff;
+                opacity: 1;
+            }
+
+            [fill^='#A5'] {
+                mix-blend-mode: normal;
+                fill: hsl(var(--primary-h), calc(var(--primary-s) + 1%), calc(var(--primary-l) + 16%));
+            }
         }
     }
 }
