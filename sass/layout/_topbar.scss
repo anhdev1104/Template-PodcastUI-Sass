@@ -1,20 +1,46 @@
 @use '../abstracts';
 
-.top-bar {
+.topbar {
     padding: 24px 56px;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &-right {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    & > * {
+        flex-shrink: 0;
+    }
+}
+
+.profile {
+    @include abstracts.size(48px);
+    display: block;
+    border-radius: 100rem;
+    overflow: hidden;
+    img {
+        @include abstracts.cover();
+    }
+}
+
+.button-upload {
+    @include abstracts.bg(abstracts.$primary-color);
+    padding: 12px 16px;
+    @include abstracts.flexBox(center, null, 6px);
+    color: abstracts.$gray-natural1;
+    border-radius: 8px;
+    @include abstracts.fw('semibold');
 }
 
 .search {
     @include abstracts.bg(abstracts.$gray-natural2);
     padding: 12px 20px;
     border-radius: 12px;
-    gap: 12px;
-    display: flex;
-    align-items: center;
+    @include abstracts.flexBox(center, center, 12px);
     flex: 0 1 360px;
 
     &-input {
