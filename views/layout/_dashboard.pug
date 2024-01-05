@@ -1,4 +1,4 @@
-include ../mixins/mixins
+include ../mixins/_mixins
 
 doctype html
 html(lang="en")
@@ -15,8 +15,8 @@ html(lang="en")
 
     body 
         .wrapper
-            include ./sidebar
+            include ./_sidebar
             main.main 
-                include ./topbar
+                include ./_topbar
                 .main-content
                 block main 
