@@ -1,0 +1,8 @@
+.host
+    h2.host-heading Popular Host
+    ul.host-list
+        each user in [{name: 'Thomas', color: '#FFBAA5', avatar: './images/avatar-host.png 2x'}, {name: 'Darrell', color: '#FFD381', avatar: './images/avatar-host2.png 2x'}, {name: 'Arlene', color: '#B6AEE9', avatar: './images/avatar-host3.png 2x'}, {name: 'Kristin', color: '#FFB5CD', avatar: './images/avatar-host4.png 2x'}, {name: 'Courtney', color: '#FFE2AB', avatar: './images/avatar-host5.png 2x'}, {name: 'Cody', color: '#FFC7D9', avatar: './images/avatar-host6.png 2x'}, {name: 'Anhdev', color: '#B6AEE9', avatar: './images/avatar-host7.png 2x'}]
+            li.host-item
+                .host-avatar(style= `--color: ${user.color}`)
+                    img(srcSet= user.avatar alt="avatar-host")
+                span.host-name= user.name

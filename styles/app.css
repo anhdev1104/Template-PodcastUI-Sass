@@ -73,6 +73,10 @@ body {
   min-height: 100vh;
 }
 
+.main-container {
+  padding: 37px 56px;
+}
+
 .topbar {
   padding: 24px 56px;
   background-color: #fff;
@@ -107,6 +111,7 @@ body {
   padding: 12px 16px;
   display: flex;
   align-items: center;
+  flex-direction: row;
   gap: 6px;
   color: hsl(0, 0%, 99%);
   border-radius: 8px;
@@ -119,6 +124,7 @@ body {
   border-radius: 12px;
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: center;
   gap: 12px;
   flex: 0 1 360px;
