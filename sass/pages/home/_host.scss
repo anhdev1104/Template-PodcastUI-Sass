@@ -1,25 +1,29 @@
 @use '../../abstracts';
 
 .host {
+    padding-bottom: 28px;
     &-heading {
-        font-size: 16px;
-        color: abstracts.$text-black1;
-        @include abstracts.fw('semibold');
-        margin-bottom: 20px;
-        font-weight: 600;
+        --mb: 20px;
     }
 
     &-list {
-        @include abstracts.flexBox(flex-start, space-between, null, null);
+        --gap: 12px;
+        @include abstracts.flexBox(flex-start, space-between, var(--gap), null);
     }
 
     &-item {
-        @include abstracts.flexBox(center, null, 7px, column);
+        --gap: 7px;
+        --avatar-size: 44px;
+        @include abstracts.flexBox(center, null, var(--gap), column);
+        @include abstracts.screenMW(768px) {
+            --gap: 10px;
+            --avatar-size: 64px;
+        }
     }
 
     &-avatar {
         position: relative;
-        @include abstracts.size(70px);
+        @include abstracts.size(var(--avatar-size));
         border-radius: 100rem;
         @include abstracts.flexBox(end, center);
         overflow: hidden;

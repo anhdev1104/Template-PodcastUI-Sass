@@ -1,0 +1,9 @@
+@use '../abstracts';
+
+.heading {
+    --mb: 0;
+    font-size: 16px;
+    color: abstracts.$text-black1;
+    @include abstracts.fw('semibold');
+    margin-bottom: var(--mb);
+}

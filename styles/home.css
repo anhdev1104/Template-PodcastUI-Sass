@@ -4,28 +4,37 @@
   --primary-l: 60%;
 }
 
+.host {
+  padding-bottom: 28px;
+}
 .host-heading {
-  font-size: 16px;
-  color: hsl(220, 10%, 12%);
-  font-weight: 600;
-  margin-bottom: 20px;
-  font-weight: 600;
+  --mb: 20px;
 }
 .host-list {
+  --gap: 12px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: var(--gap);
 }
 .host-item {
+  --gap: 7px;
+  --avatar-size: 44px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 7px;
+  gap: var(--gap);
+}
+@media screen and (min-width: 768px) {
+  .host-item {
+    --gap: 10px;
+    --avatar-size: 64px;
+  }
 }
 .host-avatar {
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
   border-radius: 100rem;
   display: flex;
   align-items: end;
@@ -39,7 +48,83 @@
 }
 .host-name {
   font-size: 14px;
-  color: hsl(216, 3%, 38%);
+  color: #5e6064;
+}
+
+.trending {
+  padding-top: 50px;
+  container-type: inline-size;
+  container-name: trending;
+}
+.trending-heading {
+  --mb: 11px;
+}
+.trending-banner {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: flex-start;
+}
+.trending-content {
+  flex: 0 0 310px;
+}
+.trending-title {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-bottom: 11px;
+}
+.trending-title span {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(92deg, #415ef4 0.33%, #7141ef 28.14%);
+}
+.trending-podcast {
+  font-size: 14px;
+  color: #676a6f;
+  margin-bottom: 4px;
+}
+.trending-author {
+  font-size: 14px;
+  color: #232323;
+  margin-bottom: 20px;
+}
+.trending-author span {
+  color: #676a6f;
+}
+.trending-image {
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  max-width: 332px;
+}
+.trending-circle {
+  position: absolute;
+  bottom: 0;
+  right: 35%;
+}
+.trending-vector {
+  position: absolute;
+  right: 15%;
+  top: 5%;
+}
+@media screen and (max-width: 767px) {
+  .trending-vector {
+    right: 15px;
+  }
+  .trending-circle {
+    right: 0;
+  }
+}
+@container trending (max-width: 630px) {
+  .trending-image {
+    display: none;
+  }
+  .trending-content {
+    flex: 1;
+  }
 }
 
 .home-wrapper {

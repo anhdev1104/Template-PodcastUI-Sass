@@ -1,0 +1,76 @@
+@use '../../abstracts';
+
+.trending {
+    padding-top: 50px;
+    container-type: inline-size;
+    container-name: trending;
+    &-heading {
+        --mb: 11px;
+    }
+
+    &-banner {
+        position: relative;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        display: flex;
+        align-items: flex-start;
+    }
+    &-content {
+        flex: 0 0 310px;
+    }
+    &-title {
+        font-size: 22px;
+        line-height: 1.45;
+        margin-bottom: 11px;
+        span {
+            @include abstracts.textGradient();
+            background-image: abstracts.$gradient;
+        }
+    }
+    &-podcast {
+        font-size: 14px;
+        color: abstracts.$gray-natural;
+        margin-bottom: 4px;
+    }
+    &-author {
+        font-size: 14px;
+        color: abstracts.$primary-black;
+        margin-bottom: 20px;
+        span {
+            color: abstracts.$gray-natural;
+        }
+    }
+    &-image {
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+        max-width: 332px;
+    }
+    &-circle {
+        position: absolute;
+        bottom: 0;
+        right: 35%;
+    }
+    &-vector {
+        position: absolute;
+        right: 15%;
+        top: 5%;
+    }
+    @include abstracts.screenMaxWidth(767px) {
+        &-vector {
+            right: 15px;
+        }
+        &-circle {
+            right: 0;
+        }
+    }
+    @container trending (max-width: 630px) {
+        &-image {
+            display: none;
+        }
+        &-content {
+            flex: 1;
+        }
+    }
+}

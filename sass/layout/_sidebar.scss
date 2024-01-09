@@ -3,6 +3,9 @@
     @include abstracts.bg();
     padding: 48px 30px;
     border-right: 1px solid abstracts.$gray-natural2;
+    @include abstracts.screenMaxWidth(1279.98px) {
+        display: none;
+    }
 }
 
 .logo {
