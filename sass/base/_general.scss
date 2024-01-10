@@ -6,4 +6,5 @@
     color: abstracts.$text-black1;
     @include abstracts.fw('semibold');
     margin-bottom: var(--mb);
+    line-height: 1.5;
 }
