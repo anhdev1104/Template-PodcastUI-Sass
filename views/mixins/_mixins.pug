@@ -32,11 +32,11 @@ mixin toggle()
         .toggle-main 
             .toggle-spinner
 
-mixin buttonPlay(icon)
+mixin button(icon = false, title = 'Play Episode')
     button.button.button--primary 
         if icon
             include ../icons/_icon-play
-        span Play Episode
+        span= title
 
 mixin feedItem()
     .feed-item 
@@ -70,4 +70,42 @@ mixin feedItem()
                     include ../icons/_icon-star
                 button
                     include ../icons/_icon-playlist
-            +buttonPlay(true)
+            +button(true)
+
+mixin widgetHeader( title = '', url = '#')
+    .widget-header
+        h3.widget-heading= title
+        a.widget-view-all(href= url) View All 
+
+mixin followItem 
+    .follow
+        .follow-user 
+            .follow-user-avatar 
+                img(src="https://images.unsplash.com/photo-1623039497026-00af61471107?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2lybCUyMGJvZHl8ZW58MHx8MHx8fDA%3D" alt="")
+            .follow-user-info
+                h4.follow-user-name Yahia Amin
+                p.follow-user-username @yahiamdamin
+        .follow-action 
+            +button(false, 'Follow')
+
+mixin listenItem 
+    .listen
+        .listen-image 
+            img(src="https://images.unsplash.com/photo-1547082299-de196ea013d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA4fHxtYWN8ZW58MHx8MHx8fDA%3D" alt="")
+        .listen-info 
+            span.listen-text Perspective with Yahia Amin
+            h4.listen-title Don't Always Win | LifeSpring
+            .listen-meta
+                .listen-meta-item 
+                    include ../icons/_icon-play2
+                    span 156
+                .listen-meta-item
+                    include ../icons/_icon-heart
+                    span 78
+
+mixin topicItem 
+    .topic
+        img(src="https://images.unsplash.com/photo-1508182314998-3bd49473002f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxtYWN8ZW58MHx8MHx8fDA%3D" alt="").topic-image
+        .topic-content
+            h4.topic-title 👫 Society &amp; Culture
+            .topic-podcast 761k podcast
