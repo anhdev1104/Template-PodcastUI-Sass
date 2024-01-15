@@ -29,12 +29,11 @@
         overflow: hidden;
         position: relative;
         background-color: var(--color);
-        box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--color);
+        box-shadow: 0 0 0 2px var(--bg-body-color), 0 0 0 3px var(--color);
     }
 
     &-name {
         font-size: 14px;
-        color: abstracts.$gray1;
     }
     @media screen and (max-width: 767.98px) {
         padding-bottom: 0;

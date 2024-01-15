@@ -57,7 +57,6 @@ ol {
 
 body {
   font-family: "IBM Plex Sans", sans-serif;
-  color: #1c1e22;
   font-weight: 400;
   font-size: 15px;
   text-rendering: optimizeLegibility;
@@ -77,7 +76,6 @@ h6 {
 .heading {
   --mb: 0;
   font-size: 16px;
-  color: #1c1e22;
   font-weight: 600;
   margin-bottom: var(--mb);
   line-height: 1.5;
@@ -99,6 +97,84 @@ h6 {
 .widget-view-all {
   font-size: 13px;
   color: #a5a6b1;
+}
+
+:root {
+  --bg-body-color: #fff;
+  --sidebar-line: #e9eef4;
+  --search-bg: #f0f3f6;
+  --menu-text: #8494ab;
+  --global-text: #1b1d21;
+  --trending-bg: #f8f8f8;
+  --host-name: #5f6164;
+}
+
+body {
+  color: var(--global-text);
+}
+
+body,
+.sidebar,
+.topbar {
+  background-color: var(--bg-body-color);
+}
+
+.sidebar {
+  border-right: 1px solid var(--sidebar-line);
+}
+
+.menu:not(:last-child):after {
+  background-color: var(--sidebar-line);
+}
+.menu-link {
+  color: var(--menu-text);
+}
+
+.search {
+  background-color: var(--search-bg);
+}
+
+.trending-banner {
+  background-color: var(--trending-bg);
+}
+
+.host-name {
+  color: var(--host-name);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body-color: #242731;
+    --sidebar-line: #373a43;
+    --search-bg: #373a43;
+    --menu-text: #ababab;
+    --global-text: #fff;
+    --trending-bg: #050f16;
+    --host-name: #e4e4e4;
+    --trending-podcast: #a6a7b2;
+    --trending-author: #fff;
+    --feed-border: #373a43;
+    --toggle-text: #fff;
+    --logo-color: #fff;
+    --icon-path: #676a67;
+    --navigation-bg: #242731;
+  }
+}
+html.dark {
+  --bg-body-color: #242731;
+  --sidebar-line: #373a43;
+  --search-bg: #373a43;
+  --menu-text: #ababab;
+  --global-text: #fff;
+  --trending-bg: #050f16;
+  --host-name: #e4e4e4;
+  --trending-podcast: #a6a7b2;
+  --trending-author: #fff;
+  --feed-border: #373a43;
+  --toggle-text: #fff;
+  --logo-color: #fff;
+  --icon-path: #676a67;
+  --navigation-bg: #242731;
 }
 
 .button {
@@ -148,7 +224,6 @@ h6 {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #ffffff;
   display: grid;
   grid-template-columns: 256px minmax(0, 1fr);
   min-height: 100vh;
@@ -187,13 +262,13 @@ h6 {
 }
 .topbar {
   padding: 24px 56px;
-  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .topbar-logo {
   flex-shrink: 0;
+  color: #fff;
 }
 .topbar-right {
   display: flex;
@@ -202,6 +277,11 @@ h6 {
 }
 .topbar > * {
   flex-shrink: 0;
+}
+@media screen and (min-width: 1280px) {
+  .topbar .topbar-logo {
+    display: none;
+  }
 }
 
 .profile {
@@ -225,7 +305,6 @@ h6 {
 }
 
 .search {
-  background-color: #eff2f6;
   padding: 12px 20px;
   border-radius: 12px;
   display: flex;
@@ -236,7 +315,6 @@ h6 {
   flex: 0 1 360px;
 }
 .search-input {
-  background-color: transparent;
   flex: 1;
   border: none;
   outline: none;
@@ -264,9 +342,7 @@ h6 {
   }
 }
 .sidebar {
-  background-color: #fff;
   padding: 48px 30px;
-  border-right: 1px solid #eff2f6;
 }
 @media screen and (max-width: 1279.98px) {
   .sidebar {
@@ -284,6 +360,7 @@ h6 {
 .logo {
   display: block;
   margin-bottom: 44px;
+  color: var(--logo-color, #11142d);
 }
 
 .menu {
@@ -296,7 +373,6 @@ h6 {
   content: "";
   display: block;
   height: 1px;
-  background-color: #ebeff5;
   margin-block: var(--gap);
 }
 .menu-heading {
@@ -312,12 +388,14 @@ h6 {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #8393aa;
   font-size: 14px;
   line-height: 143%;
   font-weight: 500;
   padding: 8px 30px 8px 20px;
   border-radius: 12px;
+}
+.menu-link [fill^="#E5"] {
+  fill: var(--icon-path, #e5eaf1);
 }
 .menu-link:hover {
   background: var(--Gradient, linear-gradient(92deg, #415ef4 0.33%, #7141ef 28.14%));
@@ -337,7 +415,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   padding: 14px 24px;
-  background-color: #fff;
+  background-color: var(--navigation-bg, #fff);
   position: fixed;
   bottom: 0;
   left: 0;

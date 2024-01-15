@@ -12,7 +12,6 @@
         position: relative;
         padding: 20px;
         border-radius: 10px;
-        background-color: #f8f8f8;
         display: flex;
         align-items: flex-start;
     }
@@ -30,12 +29,12 @@
     }
     &-podcast {
         font-size: 14px;
-        color: abstracts.$gray-natural;
+        color: var(--trending-podcast, #676a6f);
         margin-bottom: 4px;
     }
     &-author {
         font-size: 14px;
-        color: abstracts.$primary-black;
+        color: var(--trending-author, abstracts.$primary-black);
         margin-bottom: 20px;
         span {
             color: abstracts.$gray-natural;

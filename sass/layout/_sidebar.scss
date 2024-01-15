@@ -1,8 +1,6 @@
 @use '../abstracts';
 .sidebar {
-    @include abstracts.bg();
     padding: 48px 30px;
-    border-right: 1px solid abstracts.$gray-natural2;
     @include abstracts.screenMaxWidth(1279.98px) {
         position: fixed;
         top: 0;
@@ -18,6 +16,7 @@
 .logo {
     display: block;
     margin-bottom: 44px;
+    color: var(--logo-color, #11142d);
 }
 
 .menu {
@@ -29,7 +28,6 @@
         content: '';
         display: block;
         height: 1px;
-        background-color: abstracts.$gray9;
         margin-block: var(--gap);
     }
 
@@ -48,12 +46,14 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        color: abstracts.$text-gray;
         font-size: 14px;
         line-height: 143%;
         font-weight: 500;
         padding: 8px 30px 8px 20px;
         border-radius: 12px;
+        [fill^='#E5'] {
+            fill: var(--icon-path, #e5eaf1);
+        }
         &:hover {
             background: var(--Gradient, linear-gradient(92deg, #415ef4 0.33%, #7141ef 28.14%));
             color: #fff;

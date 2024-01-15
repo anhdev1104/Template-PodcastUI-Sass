@@ -33,7 +33,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        color: $gray1;
+        color: var(--toggle-text, $gray1);
         font-size: 14px;
         font-weight: 500;
     }
@@ -47,7 +47,7 @@
         container-name: feedMain;
     }
     &-item {
-        border: 1px solid #f0f3f6;
+        border: 1px solid var(--feed-border, #f0f3f6);
         border-radius: 10px;
         margin-bottom: 30px;
         & > * {
@@ -63,8 +63,8 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            border-top: 1px solid #f0f3f6;
-            border-bottom: 1px solid #f0f3f6;
+            border-top: 1px solid var(--feed-border, #f0f3f6);
+            border-bottom: 1px solid var(--feed-border, #f0f3f6);
             padding: 20px;
             flex-direction: column;
         }

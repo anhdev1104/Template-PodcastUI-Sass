@@ -45,11 +45,10 @@
   overflow: hidden;
   position: relative;
   background-color: var(--color);
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--color);
+  box-shadow: 0 0 0 2px var(--bg-body-color), 0 0 0 3px var(--color);
 }
 .host-name {
   font-size: 14px;
-  color: #5e6064;
 }
 @media screen and (max-width: 767.98px) {
   .host {
@@ -91,7 +90,6 @@
   position: relative;
   padding: 20px;
   border-radius: 10px;
-  background-color: #f8f8f8;
   display: flex;
   align-items: flex-start;
 }
@@ -111,12 +109,12 @@
 }
 .trending-podcast {
   font-size: 14px;
-  color: #676a6f;
+  color: var(--trending-podcast, #676a6f);
   margin-bottom: 4px;
 }
 .trending-author {
   font-size: 14px;
-  color: #232323;
+  color: var(--trending-author, #232323);
   margin-bottom: 20px;
 }
 .trending-author span {
@@ -185,7 +183,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #5e6064;
+  color: var(--toggle-text, #5e6064);
   font-size: 14px;
   font-weight: 500;
 }
@@ -199,7 +197,7 @@
   container-name: feedMain;
 }
 .feed-item {
-  border: 1px solid #f0f3f6;
+  border: 1px solid var(--feed-border, #f0f3f6);
   border-radius: 10px;
   margin-bottom: 30px;
 }
@@ -216,8 +214,8 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  border-top: 1px solid #f0f3f6;
-  border-bottom: 1px solid #f0f3f6;
+  border-top: 1px solid var(--feed-border, #f0f3f6);
+  border-bottom: 1px solid var(--feed-border, #f0f3f6);
   padding: 20px;
   flex-direction: column;
 }
@@ -351,7 +349,7 @@
   flex: 0 0 46px;
   aspect-ratio: 1;
   border-radius: 8px;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #f84d9a;
+  box-shadow: 0 0 0 2px var(--bg-body-color), 0 0 0 3px #f84d9a;
 }
 .follow-user-avatar img {
   width: 100%;
